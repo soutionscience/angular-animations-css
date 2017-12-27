@@ -1,0 +1,28 @@
+.myBorder{
+    border: solid rgb(192, 206, 224) 0.6px;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 20px 0px;
+    padding: 20px;
+    display: block;
+   
+}
+/* .myBorder button{
+    margin: 10px 0px;
+} */
+.form-control{
+    display: inline-block;
+    width: 50%;
+}
+:host(.marked){
+    border: red 1px solid;
+    background-color: aqua;
+
+}
+
+.inactive{
+    background-color: rgb(99, 97, 97);
+    color: rgb(177, 174, 174);
+
+}
+

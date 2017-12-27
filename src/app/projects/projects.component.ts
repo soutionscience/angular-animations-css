@@ -14,8 +14,10 @@ export class ProjectsComponent implements OnInit {
   markedPrjIndex = 0;
   progress = 'progressing';
   createNew = false;
+ 
 
-  constructor(private prjService: ProjectsService) { }
+  constructor(private prjService: ProjectsService) {
+   }
 
   ngOnInit() {
     this.prjService.loadProjects()
@@ -25,10 +27,15 @@ export class ProjectsComponent implements OnInit {
           this.projects = prj;
         }
       );
-  }
 
+      console.log("marked project value", this.markedPrjIndex)
+
+      
+  }
+ 
   onStatusUpdated(newStatus: string, id: number) {
     this.projects[id].status = newStatus;
+    console.log("marked project value", this.markedPrjIndex)
   }
 
   onProjectDeleted(index: number) {
@@ -39,4 +46,5 @@ export class ProjectsComponent implements OnInit {
     this.createNew = false;
     this.projects.push(project);
   }
+  
 }

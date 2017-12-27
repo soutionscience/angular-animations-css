@@ -1,3 +1,5 @@
+
+
 <div class="row">
   <div class="col-xs-12">
     <h3>My Projects</h3>
@@ -34,9 +36,12 @@
         class="loading-bar-element"
         *ngIf="progress != 'finished'"></div>
     </div>
-    <app-project
+    <div *ngIf= "!projects" class="loader"></div>
+    <app-project [ngClass] ="myBorder"
       *ngFor="let prj of projects; let i = index"
-      [project]="prj"
+       [project]="prj"
+      [ngClass]= "{marked: markedPrjIndex === i}"
+   
       (statusUpdated)="onStatusUpdated($event, i)"
       (projectDeleted)="onProjectDeleted(i)"
       (click)="markedPrjIndex = i"></app-project>
