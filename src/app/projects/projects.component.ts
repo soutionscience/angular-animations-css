@@ -11,7 +11,7 @@ import { ProjectsService } from './projects.service';
 })
 export class ProjectsComponent implements OnInit {
   projects: Project[];
-  markedPrjIndex = 0;
+  markedPrjIndex = false;
   progress = 'progressing';
   createNew = false;
  
@@ -45,6 +45,11 @@ export class ProjectsComponent implements OnInit {
   onProjectCreated(project: Project) {
     this.createNew = false;
     this.projects.push(project);
+  }
+  clickedonDiv(){
+    console.log("div clicked")
+    this.markedPrjIndex = true;
+    console.log(this.markedPrjIndex)
   }
   
 }

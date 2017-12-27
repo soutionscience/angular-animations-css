@@ -14,15 +14,16 @@
     display: inline-block;
     width: 50%;
 }
-:host(.marked){
-    border: red 1px solid;
-    background-color: aqua;
-
-}
 
 .inactive{
     background-color: rgb(99, 97, 97);
     color: rgb(177, 174, 174);
+
+}
+:host(.marked){
+    
+    border: red 1px solid;
+    background-color: aqua;
 
 }
 
